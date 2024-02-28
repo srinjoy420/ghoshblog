@@ -1,0 +1,359 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+     
+}
+/* prevent all under lines */
+a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+/* this is the main container */
+
+.container{
+    max-width: 80vw;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+}
+/* for the header container gogle font */
+.head-container{
+    font-family: "Roboto Slab", serif;
+    margin-bottom: 70px;
+    text-align: center;
+    /* for the animation */
+    
+    animation: slidleft ease 2s forwards;
+    
+}
+/* the key frames */
+@keyframes  slidleft{
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* for the h1 and the p tag length */
+/* this is fore the header style aslo */
+.head-container h1{
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.head-container p{
+    font-weight: 700;
+    color: rgb(183, 124, 124);
+}
+/* thats the main part we style our main card section */
+/* make this grid */
+.main_container{
+    /* display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr); */
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+  
+    justify-content: center;
+    border: 2px solid black;
+    padding: 8px 12px;
+    border-radius: 10px;
+
+}
+/* for the main container responsive ness */
+
+@media screen and (max-width:780px) {
+    .main_container{
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+        border: 2px solid black;
+        padding: 8px 12px;
+        border-radius: 10px;
+
+    }
+
+        
+}
+
+
+
+/* inside the card make all of this flex item */
+.card-container{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    /* the box shadow effect */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    
+    
+  
+   
+}
+.card-container:hover{
+    transform: scale(1.01);
+    transition-duration: 500ms;
+    
+}
+/* style the card image container */
+.card-img-container{
+    /* position: relative; */
+    overflow: hidden;
+    height:    200px;;
+    
+}
+
+/* now style the card image for the box */
+.card-img img{
+    width: 209.3px;
+    height: 100px;
+}
+/* now style the card image for the box */
+.card-img{
+    /* object-fit: cover;
+    object-position: center; */
+    /* position: absolute; */
+    align-items: center;
+    height: 100%;
+    width: 100%;
+   
+}
+/* the card tite */
+.card-titel-container{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+/* position the font size of the header tag */
+.card-titel-container h2{
+    font-size: 18px;
+    color: rgb(20, 16, 16);
+
+}
+.card-titel-container p{
+    font-size: 12px;
+}
+
+/* the hover effect of card */
+.card-container  :hover .card-img{
+    transform: scale(1.1);
+    transition-duration: 200ms
+
+}
+.card-title:hover{
+    color: rgb(40, 40, 145);
+}
+
+/* style the card footer image  */
+.card-footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+/* the author image */
+.avtar-img{
+    height: 29px;
+    width: 29px;
+}
+/* now the footer left and right container first hit the left container or the avetar container */
+.card-author-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1px;
+    margin-left: 10px;
+}
+/*  the author logo round*/
+.author-avtar-container{
+    border: 2px solid;
+    border-radius: 50%;
+    background-color: rgb(226, 218, 218);
+}
+/* style the author info container make it flex and the direction was collumn */
+.author-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    gap: 3px;
+    
+}
+/* now set the colour of the date and name */
+.colouring{
+    font-size: 15px;
+}
+.colouring:hover{
+    color: rgb(136, 136, 211);
+    cursor: pointer;
+}
+.non-colouring{
+    font-size: 12;
+    margin-bottom: 5px;
+}
+/* the left side container the tag of art */
+.card-tag-container{
+    margin-right: 18px;
+    border: 2px solid black;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+/* now i want to add a hover effect and a background colour when the tag of the section will hover using the mic */
+.card-tag-container:hover{
+    background-color: rgb(18, 62, 62);
+    color: azure;
+    transform: scale(1.5);
+    transition-duration: 200ms;
+    cursor: pointer;
+
+}
+/* style the next contaier tag line */
+.add_tagline{
+    margin-top: 20px;
+    font-size: 40px;
+    font-family: cursive;
+}
+/* style the edit container where we can add our post and edit */
+.add_container{
+    margin-top: 25px;
+    width: 100%;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: cursive;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:750px) {
+    .add_container{
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+/* the left side of the image  */
+.logo_container{
+    width: 40%;
+}
+.logo_container img{
+    width: 100%;
+    
+}
+/* the rigt side container  */
+/* the heading section part */
+.add_post_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* responsiveness */
+  
+
+.add_post_container h4{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+.add_post_container p{
+    font-size: 12px;
+    color: rgb(103, 103, 192);
+}
+/* style the input section for */
+.input_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.add_input{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    gap: 25px;
+    margin-top: 10px;
+
+}
+.add_input a{
+    color: white;
+    background-color: black;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 15px; 
+    border-radius: 10px;
+}
+.add_input input{
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+/* now style the footer container */ 
+.footer-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+}
+/* add media quary */
+@media screen and (min-width:750px) {
+    .footer-container{
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+    }
+    
+}
+.footer-container ul li{
+    list-style: none;
+    
+}
+/* the logo side */
+.list-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+
+}
+/* now the tag lines */
+.footer_tagline h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.footer_tagline p{
+    font-size: 20px;
+}
+/* the tag list items */
+.copywright{
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
